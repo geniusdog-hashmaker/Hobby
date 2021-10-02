@@ -1,11 +1,19 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:hobby/second_page.dart';
+import 'package:hobby/child_page.dart';
 
-class ChildReg extends StatelessWidget {
+class ChildReg extends StatefulWidget {
   const ChildReg({Key? key}) : super(key: key);
 
   @override
+  State<ChildReg> createState() => _ChildRegState();
+}
+
+class _ChildRegState extends State<ChildReg> {
+  @override
   Widget build(BuildContext context) {
+    var _text = Random().nextInt(900000) + 100000;
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -51,23 +59,28 @@ class ChildReg extends StatelessWidget {
                       ),
                       style: TextStyle(color: Colors.white),
                     ),
-                    const TextField(
+                    TextField(
                       decoration: InputDecoration(
-                          hintText: 'Твой код:',
-                          hintStyle: TextStyle(color: Colors.white),
-                          labelStyle: TextStyle(color: Colors.white),
+                          hintText: 'Твой код: $_text',
+                          hintStyle: const TextStyle(color: Colors.white),
+                          labelStyle: const TextStyle(color: Colors.white),
                           enabled: false),
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                     ),
-                    const SizedBox(height: 10),
+                    const SizedBox(height: 5),
                     Align(
-                      alignment: const Alignment(0.75, 0.75),
+                      alignment: const Alignment(0.75, 0.9),
                       child: ElevatedButton(
                         style: ButtonStyle(
                           backgroundColor:
                               MaterialStateProperty.all<Color>(Colors.grey),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context)
+                              .pushReplacement(MaterialPageRoute(
+                            builder: (_) => const Hobbies(),
+                          ));
+                        },
                         child: const Text(
                           'Подтвердить',
                         ),

@@ -44,7 +44,7 @@ class ParentOrChild extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                    builder: (_) => const ChildReg(),
+                    builder: (_) => ChildReg(),
                   ));
                 },
                 child: const Text('👦Ребёнок',
