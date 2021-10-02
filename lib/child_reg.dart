@@ -35,6 +35,20 @@ class _ChildRegState extends State<ChildReg> {
                       'Регистрация',
                       style: TextStyle(color: Colors.white),
                     ),
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Colors.grey),
+                      ),
+                      onPressed: () {
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (_) => const Hobbies(),
+                        ));
+                      },
+                      child: const Text(
+                        'Подтвердить',
+                      ),
+                    ),
                     const TextField(
                       decoration: InputDecoration(
                         hintText: 'Фамилия',
@@ -59,33 +73,9 @@ class _ChildRegState extends State<ChildReg> {
                       ),
                       style: TextStyle(color: Colors.white),
                     ),
-                    TextField(
-                      decoration: InputDecoration(
-                          hintText: 'Твой код: $_text',
-                          hintStyle: const TextStyle(color: Colors.white),
-                          labelStyle: const TextStyle(color: Colors.white),
-                          enabled: false),
-                      style: const TextStyle(color: Colors.white),
-                    ),
+                    Text('Твой код: $_text',
+                        style: const TextStyle(color: Colors.white)),
                     const SizedBox(height: 5),
-                    Align(
-                      alignment: const Alignment(0.75, 0.9),
-                      child: ElevatedButton(
-                        style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all<Color>(Colors.grey),
-                        ),
-                        onPressed: () {
-                          Navigator.of(context)
-                              .pushReplacement(MaterialPageRoute(
-                            builder: (_) => const Hobbies(),
-                          ));
-                        },
-                        child: const Text(
-                          'Подтвердить',
-                        ),
-                      ),
-                    ),
                     TextButton(
                         style: ButtonStyle(
                             foregroundColor:

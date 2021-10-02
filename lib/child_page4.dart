@@ -1,22 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hobby/child_page2.dart';
 
-class Hobbies extends StatefulWidget {
-  const Hobbies({Key? key}) : super(key: key);
+class Hobbies4 extends StatefulWidget {
+  const Hobbies4({Key? key}) : super(key: key);
 
   @override
-  _HobbiesState createState() => _HobbiesState();
+  _Hobbies4State createState() => _Hobbies4State();
 }
 
-class _HobbiesState extends State<Hobbies> {
+class _Hobbies4State extends State<Hobbies4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
             decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/images/thackvando.png'),
+                    image: AssetImage('assets/images/yunost.png'),
                     fit: BoxFit.cover)),
             child: Align(
               alignment: Alignment.bottomCenter,
@@ -24,11 +23,7 @@ class _HobbiesState extends State<Hobbies> {
                 children: [
                   SizedBox(
                       child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (_) => const Hobbies2(),
-                      ));
-                    },
+                    onPressed: () {},
                     child: const Text('Не хочу'),
                     style: ButtonStyle(
                       backgroundColor:
@@ -37,11 +32,7 @@ class _HobbiesState extends State<Hobbies> {
                   )),
                   SizedBox(
                       child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (_) => const Hobbies2(),
-                      ));
-                    },
+                    onPressed: () {},
                     child: const Text('Хочу!'),
                     style: ButtonStyle(
                       backgroundColor:

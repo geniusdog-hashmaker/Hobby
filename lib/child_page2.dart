@@ -1,22 +1,22 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hobby/child_page2.dart';
+import 'package:hobby/child_page3.dart';
 
-class Hobbies extends StatefulWidget {
-  const Hobbies({Key? key}) : super(key: key);
+class Hobbies2 extends StatefulWidget {
+  const Hobbies2({Key? key}) : super(key: key);
 
   @override
-  _HobbiesState createState() => _HobbiesState();
+  _Hobbies2State createState() => _Hobbies2State();
 }
 
-class _HobbiesState extends State<Hobbies> {
+class _Hobbies2State extends State<Hobbies2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
             decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/images/thackvando.png'),
+                    image: AssetImage('assets/images/ag.png'),
                     fit: BoxFit.cover)),
             child: Align(
               alignment: Alignment.bottomCenter,
@@ -26,7 +26,7 @@ class _HobbiesState extends State<Hobbies> {
                       child: ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (_) => const Hobbies2(),
+                        builder: (_) => const Hobbies3(),
                       ));
                     },
                     child: const Text('Не хочу'),
@@ -39,7 +39,7 @@ class _HobbiesState extends State<Hobbies> {
                       child: ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (_) => const Hobbies2(),
+                        builder: (_) => const Hobbies3(),
                       ));
                     },
                     child: const Text('Хочу!'),
